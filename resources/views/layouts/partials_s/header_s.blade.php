@@ -1,9 +1,9 @@
 <!-- Header -->
-<header class="header-custom">
+<header class="header-custom-s">
     <div class="logo">TECHMIN</div>
     <nav>
         <ul>
-            <li><a href="{{ route('services') }}">Services</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="#">Our Equipment</a></li>
             <li><a href="#">How It Works</a></li>
             <!--
@@ -20,6 +20,7 @@
             <li><a href="#">Clients</a></li>
             <li><a href="#">Team</a></li>
             <li><a href="#">Contact Us</a></li>
+            
         </ul>
     </nav>
     <div class="auth-buttons">

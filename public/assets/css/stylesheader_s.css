@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 /* Estructura del Header */
-.header-custom {
+.header-custom-s {
     font-family: 'Manrope', sans-serif;
     display: flex;
     justify-content: space-between;
@@ -11,15 +11,16 @@
 }
 
 /* Logo */
-.header-custom .logo {
+.header-custom-s .logo {
     font-size: 30px;
     font-weight: bold;
     color: #FCE803;
     margin-right: 5%;
 }
 
+
 /* Menú de Navegación */
-.header-custom nav ul {
+.header-custom-s nav ul {
     list-style: none;
     display: flex;
     gap: 10px;
@@ -28,11 +29,11 @@
     font-size: 15px;
 }
 
-.header-custom nav ul li {
+.header-custom-s nav ul li {
     display: inline;
 }
 
-.header-custom nav ul li a {
+.header-custom-s nav ul li a {
     color: #FCE803;
     text-decoration: none;
     font-weight: 500;
@@ -41,19 +42,19 @@
     border-radius: 5px;
 }
 
-.header-custom nav ul li a:hover {
+.header-custom-s nav ul li a:hover {
     color: #FFFFFF; 
     background-color: transparent;
 }
 
-.header-custom .auth-buttons {
+.header-custom-s .auth-buttons {
     display: flex;
     gap: 15px;
     margin-left: -10px;
     left: -10px;
 }
 
-.header-custom .login {
+.header-custom-s .login {
     background: transparent;
     color: #FCE803;
     border: 2px solid #FCE803;
@@ -63,12 +64,12 @@
     text-align: center;
 }
 
-.header-custom .login:hover {
+.header-custom-s .login:hover {
     background-color: #FCE803;
     color: #0F161E;
 }
 
-.header-custom .signup {
+.header-custom-s .signup {
     background: transparent;
     color: #FCE803;
     border: 2px solid #FCE803;
@@ -77,12 +78,12 @@
     text-decoration: none;
 }
 
-.header-custom .signup:hover {
+.header-custom-s .signup:hover {
     background-color: #FCE803;
     color: #0F161E;
 }
 
-.header-custom .user_menu img{
+.header-custom-s .user_menu img{
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -91,7 +92,7 @@
     margin-top: 5px;
 }
 
-.header-custom .btn-logout{
+.header-custom-s .btn-logout{
     background: transparent;
     color: #FCE803;
     border: 2px solid #FCE803;
@@ -102,7 +103,7 @@
 
 }
 
-.header-custom .btn-logout:hover {
+.header-custom-s .btn-logout:hover {
     background-color: #FCE803;
     color: #0F161E;
 
@@ -110,12 +111,8 @@
 
 /* Estilos Responsivos */
 @media (max-width: 600px) {
-    .header-custom {
+    .header-custom-s {
         flex-direction: column;
         gap: 10px;
     }
 }
-
-
-
-

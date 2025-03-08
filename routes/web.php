@@ -43,6 +43,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/home', [HomeController::class, 'index']);
     Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
+    Route::get('/services', function () {
+        return view('home.services');
+    })->name('services');
 });
 
 Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
