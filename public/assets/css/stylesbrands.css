@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* Estilos generales para la sección "Trusted by these brands and more" en Laravel */
+.trusted-brands {
+    font-family: 'Manrope', sans-serif;
+    background-color:#FFFFFF;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 10%;
+    margin-bottom: -20%;
+    width: 100%;
+    color: #1F1D2B; /* Color de texto */
+}
+
+/* Contenedor principal */
+.trusted-brands .container {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Título de la sección */
+.trusted-brands h2 {
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 80px; /* Espacio inferior */
+    color: #1F1D2B; /* Color del texto */
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: 700; /* Negrita */
+    margin-top: -80px;
+}
+
+/* Contenedor de las marcas */
+.trusted-brands .brands-wrapper {
+    display: flex; /* Uso de Flexbox */
+    justify-content: space-around; /* Distribuir uniformemente */
+    align-items: center; /* Alinear verticalmente */
+    flex-wrap: wrap; /* Permitir que las marcas se ajusten en varias líneas si es necesario */
+    gap: 20px; /* Espacio entre marcas */
+}
+
+/* Estilos individuales para cada marca */
+.trusted-brands .brand {
+    width: 200px; /* Ancho fijo para cada marca */
+    text-align: center; /* Centrar contenido */
+}
+
+/* Estilos de las imágenes de marca */
+.trusted-brands .brand img {
+    max-width: 100%; /* Ajustar imagen al contenedor */
+    height: auto; /* Mantener proporción */
+}

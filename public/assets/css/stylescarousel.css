@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.Carousel-section {
+    font-family: 'Manrope', sans-serif;
+    background-color:#FFFFFF;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 10%;
+    margin-bottom: -20%;
+    width: 100%;
+}
+
+.Carousel-section h2 {
+    font-size: 15px; /* Ajusta el tamaño del texto */
+    margin-top: 200px; /* Ajusta el margen superior */
+    margin-bottom: 125px; /* Ajusta el margen inferior */
+    text-align: center; /* Justifica el texto */
+    color: #1F1D2B;
+    position: relative; /* Ajusta la posición, puedes usar valores como 'absolute' si necesitas */
+    /* Agrega otras propiedades de posición según tus necesidades */
+}
+
+.Carousel-section h3 {
+    font-size: 25px; /* Ajusta el tamaño del texto */
+    margin-top: 150px; /* Ajusta el margen superior */
+    margin-bottom: -225px; /* Ajusta el margen inferior */
+    text-align: center; /* Justifica el texto */
+    color: #1F1D2B;
+    position: relative; /* Ajusta la posición, puedes usar valores como 'absolute' si necesitas */
+    /* Agrega otras propiedades de posición según tus necesidades */
+}
+
+
+.Carousel-section .swiper {
+    width: 80%;
+    max-width: 1200px;
+}
+
+.Carousel-section .swiper-slide {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 320px; /*ancho de la card*/
+}
+
+.Carousel-section .swiper-slide img {
+    max-width: 110%; /*tamaño de la imagen*/
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.Carousel-section .offer-icon img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent; /*color del fondo icono*/
+    border-radius: 50%; /*redondea los bordes del icono*/
+}
+
+.Carousel-section .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.Carousel-section .id {
+    font-size: 14px;
+    color: #999;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.Carousel-section .rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px 0;
+    margin-top: -5%;
+}
+
+.Carousel-section .rating-row {
+    display: flex;
+    align-items: center;
+    margin-top: -2%;
+}
+
+.Carousel-section .rating img {
+    width: 20px;
+    height: 20px;
+    margin-top: 11px;
+    margin-right: 5px;
+}
+
+.Carousel-section .stars {
+    color: #FFD700;
+    margin-bottom: 2px;
+}
+
+.Carousel-section .reviews {
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.Carousel-section .price-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 15px 0;
+    margin-top: -10%;
+}
+
+.Carousel-section .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+    font-size: 20;
+}
+
+.Carousel-section .discount {
+    color: #333;
+    font-size: 6;
+    background-color: #FFD700;
+    padding: auto;
+}
+
+.Carousel-section .new-price {
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+    text-align: justify;
+    flex-grow: 1;
+    margin-top: -12%;
+}
+
+.Carousel-section .cart-button {
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-top: -30%;
+    margin-right: 2%;
+}
+
+.Carousel-section .cart-button img {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+}
+
+.Carousel-section .cart-button:hover {
+    background-color: #FFC107;
+}
+
+.Carousel-section .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.Carousel-section .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: opacity 0.3s ease;
+}
+
+.Carousel-section .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ffcc00;
+}

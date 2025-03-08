@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* Estilos específicos para la sección "best-product" */
+.best-product {
+    font-family: 'Manrope', sans-serif;
+    background-color: #0F161E;
+    color: white;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    box-sizing: border-box;
+    margin-top: 20%;
+}
+
+.best-product .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.best-product .product-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.best-product .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.best-product .image img {
+    max-width: 500px;
+    height: auto;
+    margin-top: -65px;
+}
+
+.best-product .details {
+    flex: 1.2;
+    padding-left: 20px;
+    position: relative;
+}
+
+.best-product h3 {
+    font-size: 200%;
+    margin-bottom: 50px;
+    color: white;
+    margin-top: -0.50px;
+    margin-left: -190px;
+}
+
+.best-product .price h2 {
+    font-size: 170%;
+    color: #FCE803;
+    margin-top: -40px;
+    position: absolute;
+    margin-left: -63px;
+    font-weight: 500;
+
+}
+
+.best-product .rating {
+    display: inline;
+    align-items: center;
+    margin-bottom: 35px;
+    margin-left: -70px;
+    margin-top: -10px;
+}
+
+
+.best-product .rating span {
+    color: #81859C;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+.best-product .rating .stars{
+    color: #FCE803;
+    margin-bottom: 2px;
+
+}
+
+.best-product .description p {
+    color: #B0B3BF;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 90%;
+    text-align: justify;
+    margin-left: -60px;
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+.best-product .actions{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 250px;
+    padding-right: 5px;
+
+}
+
+.best-product .add-to-cart {
+    background-color: #FCE803;
+    color: #000;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 150px;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.best-product .add-to-cart:hover {
+    background-color: #e0d302;
+    transform: translateY(-3px);
+}
+
+/* Línea divisoria blanca */
+.best-product .line {
+    position: absolute;
+    left: 40%;
+    top: 7%;
+    bottom: 10%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,83 @@
+/* Sobrescribe los estilos de Bootstrap */
+.navbar {
+  background-color: #0F161E !important; /* Fondo oscuro */
+  padding: 15px 30px;
+}
+
+/* Marca/Logo */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FCE803 !important; /* Amarillo brillante */
+}
+
+/* Estilos de los enlaces del menú */
+.navbar-nav .nav-link {
+  color: #FFFFFF !important; /* Blanco */
+  font-size: 1rem;
+  margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+  color: #FCE803 !important; /* Amarillo brillante */
+}
+
+/* Botón de menú en dispositivos pequeños */
+.navbar-toggler {
+  border-color: #FCE803 !important;
+}
+
+/* Botones de Log In y Sign In */
+.btn-login {
+  border: 2px solid #FCE803;
+  color: #FCE803;
+  background-color: transparent;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.btn-login:hover {
+  background-color: #FCE803;
+  color: #0F161E;
+}
+
+.btn-signin {
+  background-color: #FCE803;
+  color: #0F161E;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  border: none;
+}
+
+.btn-signin:hover {
+  background-color: #FFFFFF;
+  color: #0F161E;
+}
+
+/* Ajustes de margen y alineación */
+.navbar-nav {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-collapse {
+  justify-content: space-between;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  background-color: #0F161E;
+}
+
+.dropdown-item {
+  color: #FFFFFF !important;
+}
+
+.dropdown-item:hover {
+  color: #FCE803 !important;
+  background-color: #0F161E !important;
+}

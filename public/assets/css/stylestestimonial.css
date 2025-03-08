@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.testimonial-section {
+    font-family: 'Manrope', sans-serif;
+    margin-top: -500px;
+    margin-bottom: 80px;
+    padding: 50px 20px;
+    background-color:#FFFFFF;
+    text-align: center;
+    display: block;
+}
+
+.testimonial-section h2 {
+    font-size: 24px;
+    margin-bottom: 70px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+
+
+.testimonial-section .testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas de igual ancho */
+    gap: 40px; /* Espacio entre las tarjetas */
+    max-width: 1000px; /* Opcional: Limitar el ancho total */
+    margin: 0 auto; /* Centrar el contenedor */
+    justify-content: center;
+
+}
+
+
+.testimonial-section .testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    min-height: 250px;
+    width: 100%;
+    text-align: left;
+    
+}
+
+.testimonial-section .stars {
+    color: #FFD700;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+.testimonial-section .testimonial p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 28px;
+    text-align: justify;
+
+}
+
+
+.testimonial-section .client {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: bold;
+    margin-top: 39px;
+}
+
+.testimonial-section .client img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #ddd; /* Espacio reservado para imágenes */
+    margin-top: 9px;
+}
+
+/* Destacado */
+.testimonial-section .testimonial:hover {
+    border: 2px solid #FFD700; 
+    padding: 18px;
+    transition: border 0.1s ease;  
+}
+
+ 
