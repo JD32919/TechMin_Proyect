@@ -31,9 +31,10 @@
                 </div>
 
                 <div class="options">
-                        
-                        <label> <input type="checkbox" name="remember" >Remember me</label>
-                        
+                    <label for="remember">
+                        <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        Remember me
+                    </label>      
                 </div>
 
                 <button type="submit" class="btn">Log in</button>    
@@ -42,9 +43,11 @@
         <fieldset>
             <div class="social-login">
                 <div class="social-icons">
-                    <button class="social-btn"><i class="fab fa-facebook-f"></i></button>
-                    <button class="social-btn"><i class="fab fa-google"></i></button>
-                    <button class="social-btn"><i class="fab fa-apple"></i></button>
+
+                    <a href="#" class="social-btn"><img src="assets/image/icono_facebook.png" alt="Facebook" width="30"></a>
+                    <a href="{{ url('auth/google') }}" class="social-btn"><img src="assets/image/google_b.png" alt="Google" width="40"></a>
+                    <a href="#" class="social-btn"><img src="assets/image/icono_Apple.png" alt="Apple" width="30"></a>
+
                 </div>
             </div>
         </fieldset>

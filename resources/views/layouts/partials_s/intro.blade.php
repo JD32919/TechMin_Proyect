@@ -1,3 +1,5 @@
+<div class="bienvenida">
+
     <section class="intro">
         <div class="text-content">
             <h1>Comprehensive solutions for the mining industry</h1>
@@ -11,7 +13,7 @@
     <!-- Flecha hacia abajo -->
     <div class="scroll-down">
         <p>Down to explore more</p>
-        <span>⬇️</span>
+        <span>⬇</span>
     </div>
 
     <!-- Sección de Servicios -->
@@ -19,4 +21,5 @@
         <h2>Our Services</h2>
 
      </section>
+</div>
      

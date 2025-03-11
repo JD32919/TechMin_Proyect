@@ -4,21 +4,21 @@
     <nav>
         <ul>
             <li><a href="{{ route('services') }}">Services</a></li>
-            <li><a href="#">Our Equipment</a></li>
-            <li><a href="#">How It Works</a></li>
+            <li><a href="{{ route('services') }}">Our Equipment</a></li>
+            <li><a href="{{ route('services') }}">How It Works</a></li>
             <!--
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle">How It Works</a>
+                <a href="{{ route('services') }}" class="dropdown-toggle">How It Works</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
+                    <li><a href="{{ route('services') }}">Action</a></li>
+                    <li><a href="{{ route('services') }}">Another action</a></li>
                     <li><hr></li>
-                    <li><a href="#">Something else here</a></li>
+                    <li><a href="{{ route('services') }}">Something else here</a></li>
                 </ul>
             </li>
             -->
-            <li><a href="#">Clients</a></li>
-            <li><a href="#">Team</a></li>
+            <li><a href="{{ route('services') }}">Clients</a></li>
+            <li><a href="{{ route('services') }}">Team</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
     </nav>

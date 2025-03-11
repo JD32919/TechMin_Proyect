@@ -1,7 +1,8 @@
 @extends('layouts.app-master')
 
 @section('content')
-
+    <!-- Navbar barra principal 
+     
     <h1 class="container">Home</h1>
      
     @auth
@@ -18,7 +19,7 @@
     @guest
         <p>para ver el contenido <a href="/login">inicia sesion</a></p>
     @endguest
-    
+    -->
 @endsection
 
  

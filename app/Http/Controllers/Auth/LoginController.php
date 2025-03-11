@@ -20,6 +20,7 @@ class LoginController extends Controller
 
     public function login (LoginRequest $request){
 
+
         $credentials = $request->only('username','password');
         $remember = $request->filled('remember'); // Verifica si "Remember Me" fue marcado
 
@@ -28,19 +29,16 @@ class LoginController extends Controller
             unset($credentials['username']);
         }
         
-        if(!Auth::validate($credentials)){
-            return redirect()->to('/login')->withErrors('Username and/or password is incorrect');
+        if(Auth::attempt($credentials, $remember)){
+            $user = Auth::user();
 
+            \Log::info('Usuario autenticado con remember me: ', ['user' => $user]);
+            
+            return $this->authenticated($request, $user);
         }
 
-        $user = Auth::getProvider()->retrieveByCredentials($credentials);
-
-        Auth::login($user);
-
-        \Log::info('Usuario autenticado: ', ['user' => $user]);
-
-        return $this->authenticated($request, $user);
-
+        return redirect()->to('/login')->withErrors('Username and/or password is incorrect');
+        
     }
 
     public function authenticated(Request $request, $user){
