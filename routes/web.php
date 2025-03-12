@@ -51,6 +51,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/services', function () {
         return view('home.services');
     })->name('services');
+
+    Route::get('/dashboard', function () {
+        return view('home.dashboard');
+    })->name('dashboard');
 });
 
 Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
