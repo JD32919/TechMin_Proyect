@@ -22,10 +22,11 @@ class RegisterController extends Controller
     }
 
     public function register(RegisterRequest $request){
+        
         $user = User::create($request->validated());
 
         //Enviar correo de bienvenida
-        Mail::to($user->email)->send(new WelcomeEmail($user));
+        //Mail::to($user->email)->send(new WelcomeEmail($user));
 
         return redirect('/login')->with('success','Account created successfully');
 
