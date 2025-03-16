@@ -13,7 +13,7 @@
     <!-- Flecha hacia abajo -->
     <div class="scroll-down">
         <p>Down to explore more</p>
-        <span>⬇</span>
+        <span>&#x2304;</span>
     </div>
 
     <!-- Sección de Servicios -->

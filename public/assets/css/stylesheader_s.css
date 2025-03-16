@@ -8,17 +8,35 @@
     align-items: center;
     padding: 20px 50px;
     background-color: #FFFFFF ;
-    border-bottom: 0.1px solid #0F161E;
+    position: relative;
+}
+
+.header-custom-s .separator{
+    width: 90%; /* Ajusta el ancho de la línea */
+    height: 1px; /* Grosor de la línea */
+    background-color: #0F161E; /* Color de la línea */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar la línea */
+
 }
 
 /* Logo */
-.header-custom-s .logo {
-    font-size: 30px;
-    font-weight: bold;
+.header-custom-s .logo a{
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: 700;
     color:#0F161E;
     margin-right: 5%;
 }
 
+.header-custom-s .logo a:hover{
+    color: #FCE803; 
+    background-color: transparent;
+}
 
 /* Menú de Navegación */
 .header-custom-s nav ul {
@@ -84,29 +102,39 @@
     color: #0F161E;
 }
 
+.header-custom-s .user_menu{
+    display: flex;
+    align-items: center; /* Asegura que la imagen y el botón estén alineados */
+    gap: 15px;
+}
+
 .header-custom-s .user_menu img{
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    margin-right: 10px;
+     
     background: #ddd; /* Espacio reservado para imágenes */
-    margin-top: 5px;
-    border: #0F161E;
+    border: 1px solid #0F161E;
 }
 
-.header-custom-s .btn-logout{
+.header-custom-s .user_menu .btn-logout{
     background: transparent;
     color:  #0F161E;
-    border: 2px solid  #0F161E;
+    border: 0.5px solid  #0F161E;
+    border-width: 30%;
     border-radius: 20px;
     padding: 5px 13px;
     font-size: 15px;
     text-decoration: none;
-    margin-bottom: px;
+    cursor: pointer;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
-.header-custom-s .btn-logout:hover {
+.header-custom-s .user_menu .btn-logout:hover {
     background-color: #0F161E;
     color: #FCE803;
 

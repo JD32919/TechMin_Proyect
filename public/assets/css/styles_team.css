@@ -11,6 +11,9 @@
 
 .team-section {
     padding: 50px 20px;
+    align-content: center;
+    margin-right: 0;
+    margin-left: 265px;
 }
 
 .team-section h2 {

@@ -14,9 +14,11 @@
 }
 
 .clients .clients-section h2 {
-    font-size: 36px;
-    font-weight: bold;
     margin-bottom: 30px;
+    margin-top: -20px;
+    text-align: center;
+    font-size: 65px;
+    font-weight: 800;
 }
 
 .clients .clients-container {
@@ -26,6 +28,7 @@
     align-items: flex-start;
     max-width: 900px;
     margin: auto;
+    margin-bottom: 100px;
     gap: 30px;
 }
 
@@ -36,14 +39,17 @@
 }
 
 .clients .clients-box h3 {
-    font-size: 22px;
+    font-size: 40px;
+    text-align: center;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+ 
 .clients .clients-box p, .clients .clients-box ul {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
+    text-align: center;
 }
 
 .clients .clients-box ul {
@@ -51,17 +57,50 @@
     padding-left: 20px;
 }
 
+/* cliente-box2 */
+
+.clients .clients-box2 {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+ 
+
+.clients .clients-box2 h4 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.clients .clients-box2 p, .clients .clients-box2 ul {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.clients .clients-box2 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+
 .clients .separator {
-    width: 2px;
+    width: 1px;
     background-color: black;
-    height: 100px;
+    height: 200px;
     display: none;
+    margin-left: 35px;
 }
 
 .clients .meet-team {
-    margin-top: 50px;
-    font-size: 32px;
-    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 65px;
+    font-weight: 800;
 }
 
 /* Responsive */

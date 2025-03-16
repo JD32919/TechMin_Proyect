@@ -7,7 +7,7 @@
     text-align: center;
     background-color: #FFFFFF;
 }
-
+ 
 
 /* Estilos para la sección de introducción */
 .bienvenida .intro {
@@ -34,8 +34,12 @@
 
 .bienvenida .text-content p {
     font-size: 15px;
-    align-items: center;
-    color: #222;
+    color: #0F161E;
+    font-weight: 400;
+    max-width: 60%;
+    text-align: center;
+    margin-left: 130PX;
+    margin-top: -30PX;
      
 }
 
@@ -56,6 +60,10 @@
     font-size: 18px;
     color: #666;
     text-align: center;
+}
+
+.bienvenida .scroll-down span{
+    margin-top: 30px;
 }
 
 /* Estilos para la sección de servicios */

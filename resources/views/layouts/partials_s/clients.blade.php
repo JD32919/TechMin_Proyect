@@ -7,13 +7,14 @@
                 <p>At TechMin, we take pride in being the trusted partner of leading mining, drilling, and construction companies worldwide. Our commitment to quality, innovation, and reliability has allowed us to build strong relationships with clients in various industries.</p>
             </div>
             <div class="separator"></div>
-            <div class="clients-box">
-                <h3>Our Valued Clients</h3>
+            <div class="clients-box2">
+                <h4>Our Valued Clients</h4>
+                <p>We serve a diverse range of clients, including:</p>
                 <ul>
-                    <li><strong>Mining Corporations</strong> - Large-scale mining companies optimizing their extraction processes with our equipment.</li>
-                    <li><strong>Exploration & Drilling Companies</strong> - Firms seeking high-performance drilling solutions.</li>
-                    <li><strong>Construction Companies</strong> - Businesses involved in infrastructure projects requiring durable machinery.</li>
-                    <li><strong>Raw Material Transporters</strong> - Logistics companies ensuring safe and efficient material transportation.</li>
+                    <li> Mining Corporations  - Large-scale mining companies optimizing their extraction processes with our equipment.</li>
+                    <li> Exploration & Drilling Companies  - Firms seeking high-performance drilling solutions.</li>
+                    <li> Construction Companies  - Businesses involved in infrastructure projects requiring durable machinery.</li>
+                    <li> Raw Material Transporters  - Logistics companies ensuring safe and efficient material transportation.</li>
                 </ul>
             </div>
         </div>

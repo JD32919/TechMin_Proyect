@@ -1,5 +1,4 @@
 <!-- footer-section  -->
-<div class="footer-s">
     <footer class="footer-section">
         <div class="footer-container">
              
@@ -39,7 +38,7 @@
             <div class="footer-social">
                 <h3>Join Us</h3>
                 <div class="social-icons">
-                    <a href="#"><img src="assets/image/logo_facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="assets/image/81341.png" alt="Facebook"></a>
                     <a href="#"><img src="assets/image/logo_twitter.png" alt="Twitter"></a>
                     <a href="#"><img src="assets/image/logo_instagram.png" alt="Instagram"></a>
                 </div>
@@ -47,4 +46,3 @@
             </div>
         </div>
     </footer>
-</div>

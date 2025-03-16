@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 /* Estilos Generales del Footer */
-.footer-s .footer-section {
+.footer-section {
     font-family: 'Manrope', sans-serif;
-    background-color: #0F161E;
+    background-color: #FFFFFF  ;
     display: block;
     color: #FFFFFF;
     padding: 40px 20px;
     padding-bottom: 80px;
 }
-.footer-s .footer-container {
+.footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -18,125 +18,133 @@
 }
 
 /* Sección del Logo */
-.footer-s .footer-logo h2 {
-    color: #FCE803;
+.footer-logo h2 {
+    color: #0F161E;
     font-size: 35px;
-    font-weight: 700;
-    margin-bottom: -20px;
+    font-weight: 800;
+    margin-bottom: 10px;
     margin-top: -15px;
     text-align: left;
     margin-right: -160;
 }
 
 /* Columnas1 del Footer */
-.footer-s .footer-column1 h3 {
+.footer-column1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.footer-column1 h3 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #FFFFFF;
+    color: #0F161E;
 }
-.footer-s .footer-column1 ul {
+.footer-column1 ul {
     list-style: none;
+    margin: 0;
     padding: 0;
 }
-.footer-s .footer-column1 li {
-    margin-bottom: 10px;
+.footer-column1 li {
+    margin-bottom: 8px;
 }
-.footer-s .footer-column1 a {
-    color: #81859C;
+.footer-column1 a {
+    color: #0F161E;
     text-decoration: none;
     transition: color 0.3s;
 }
-.footer-s .footer-column1 a:hover {
+.footer-column1 a:hover {
     color: #FCE803;
 }
 
 
 /* Columnas del Footer */
-.footer-s .footer-column{
-    margin-top: -87px;
+.footer-column{
+    margin-top: 75px;
      
 }
 
-.footer-s .footer-column h3 {
+.footer-column h3 {
     font-size: 18px;
     text-align: left;
-    margin-bottom: 15px;
-    color: #FFFFFF;
+    margin-bottom: 20px;
+    color: #0F161E;
 }
-.footer-s .footer-column ul {
+.footer-column ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
-.footer-s .footer-column li {
-    margin-bottom: 10px;
+.footer-column li {
+    margin-bottom: 8px;
 }
-.footer-s .footer-column a {
-    color: #81859C;
+.footer-column a {
+    color: #0F161E;
     text-decoration: none;
     transition: color 0.3s;
 }
-.footer-s .footer-column a:hover {
+.footer-column a:hover {
     color: #FCE803;
 }
 
 /* Sección de Redes Sociales */
-.footer-s .footer-social{
+.footer-social{
     text-align: center;
-    margin-top: -29px
+    margin-top: 130px
 }
 
-.footer-s .footer-social h3 {
+.footer-social h3 {
     font-size: 15px;
     text-align: center;
     margin-bottom: 15px;
-    color: #FFFFFF;
+    color: #0F161E;
 }
-.footer-s .footer-social ul {
+.footer-social ul {
     list-style: none;
     padding: 0;
 }
-.footer-s .footer-social li {
+.footer-social li {
     margin-bottom: 10px;
 }
-.footer-s .footer-social a {
-    color: #81859C;
+.footer-social a {
+    color: #0F161E;
     text-decoration: none;
     transition: color 0.3s;
 }
-.footer-s .footer-social a:hover {
+.footer-social a:hover {
     color: #FCE803;
 }
 
-.footer-s .footer-social .social-icons{  
+.footer-social .social-icons{  
     display: inline-flex;
-    gap: 2px;  
+    gap: 10px;  
 
 }
-.footer-s .footer-social .social-icons a {
+.footer-social .social-icons a {
     margin-right: 10px;    
     display: flex;
     align-items: center; 
 }
-.footer-s .footer-social img {
+.footer-social img {
     width: 24px;
     height: 24px;
     filter: brightness(0) invert(1);
     transition: transform 0.2s;
 }
-.footer-s .footer-social img:hover {
+.footer-social img:hover {
     transform: scale(1.2);
 }
 
 /* Derechos Reservados */
-.footer-s .footer-social p {
+.footer-social p {
     margin-top: 20px;
     font-size: 14px;
-    color: #81859C;
+    color: #0F161E;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .footer-s .footer-container {
+    .footer-container {
         flex-direction: column;
         align-items: flex-start;
     }

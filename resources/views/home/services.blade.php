@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/stylesservices.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles_our_equipment.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles_how_it_works.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/stylesfooter_s.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles_clients.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles_team.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/stylesfooter_s.css') }}">
 
 
 </head>

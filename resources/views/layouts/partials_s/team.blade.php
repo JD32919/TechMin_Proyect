@@ -1,6 +1,6 @@
 <div class="team"> 
     <section class="team-section">
-        <h2>Meet Our Team</h2>
+         
         <div class="team-container">
             <div class="team-member">
                 <img src="placeholder.jpg" alt="David Ibarra">

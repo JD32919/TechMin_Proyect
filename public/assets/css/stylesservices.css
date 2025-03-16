@@ -17,33 +17,126 @@
     flex-direction: column;
     align-items: center;
     padding: 50px 20px;
+     
 }
 
 .Services .service-box {
     display: flex;
     align-items: center;
-    background-color: #0F161E;
+     
     border-radius: 12px;
-    overflow: hidden;
-    max-width: 800px;
-    margin: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+     
+    max-width: 1000px;
+    margin: 30px ;
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-right: 190px;
 }
 
 .Services .service-box img {
-    width: 70%;
-    height: 100%;
+    width: 65%;
+    height: 270%;
     object-fit: cover;
 }
 
+.Services .separator{
+    width: 2px;
+    background-color: #FFFFFF;
+    height: 200px;
+     
+    margin: 0 20px;
+    margin-left: 40px;
+
+}
+
 .Services .service-content {
-    padding: 20px;
-    text-align: left;
+    flex-grow: 1;
+    max-width: none;
     width: 60%;
+    text-align: left;
+    margin-left: 30px;
 }
 
 
 .Services .service-content p {
-    font-size: 16px;
+    font-size: 13px;
+    color: #E5E7EB;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.Services .service-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 13px;
+}
+
+.Services .service-content li {
+    margin-bottom: 8px;
+    color: #E5E7EB;
+}
+
+
+
+
+
+
+
+.Services .service-box2 {
+    display: flex;
+    align-items: center;
+    
+    border-radius: 12px;
+    
+    max-width: 1000px;
+    margin: 30px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-left: 190px;
+    flex-direction: row-reverse;
+}
+
+.Services .service-box2 img {
+    width: 65%;
+    height: 270%;
+    object-fit: cover;
+}
+
+.Services .separator2{
+    width: 2px;
+    background-color: #FFFFFF;
+    height: 200px;
+    margin: 0 20px;
+    margin-left: -55PX;
+     
+
+}
+
+.Services .service-content2 {
+    flex-grow: 1;
+    max-width: none;
+    width: 60%;
+    text-align: left;
+    margin-left: -160px;
+
+}
+
+
+.Services .service-content2 p {
+    font-size: 12px;
+    max-width: 80%;
+    color: #E5E7EB;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.Services .service-content2 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+.Services .service-content2 li {
+    margin-bottom: 8px;
     color: #E5E7EB;
 }

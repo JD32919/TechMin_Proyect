@@ -1,6 +1,6 @@
 <!-- Header -->
 <header class="header-custom-s">
-    <div class="logo">TECHMIN</div>
+    <div class="logo"><a href="{{ route('index') }}">TECHMIN</a></div>
     <nav>
         <ul>
             <li><a href="#">Services</a></li>
@@ -43,5 +43,6 @@
             </div>
         @endauth
     </div>
+    <div class="separator"></div>
 </header>
 

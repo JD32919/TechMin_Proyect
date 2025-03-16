@@ -26,5 +26,6 @@
                 <div class="step-circle">6</div>
                 <p class="step-text">After-Sales Support & Maintenance</p>
             </div>
+            
         </div>
     </section>

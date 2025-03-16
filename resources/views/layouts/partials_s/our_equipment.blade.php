@@ -36,6 +36,6 @@
             </div>
         </div>
 
-        <h2>How it works</h2>
+        <h3>How it works</h3>
 
     </section>
