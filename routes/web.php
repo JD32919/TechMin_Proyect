@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\SocialAuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -43,6 +44,7 @@ Route::middleware('guest')->group(function () {
 
 });
 
+
 // 📌 Rutas protegidas para usuarios autenticados
 Route::middleware('auth')->group(function () {
     Route::get('/home', [HomeController::class, 'index']);
@@ -52,9 +54,8 @@ Route::middleware('auth')->group(function () {
         return view('home.services');
     })->name('services');
 
-    Route::get('/dashboard', function () {
-        return view('home.dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
+     
 });
 
 Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');

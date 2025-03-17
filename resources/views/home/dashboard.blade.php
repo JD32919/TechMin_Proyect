@@ -8,7 +8,7 @@
 <body>
     
 
-
+<h1>hola</h1>
 
 <main class="container">
     @yield('content')

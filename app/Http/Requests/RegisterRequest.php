@@ -23,10 +23,17 @@ class RegisterRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'email'=>'required|unique:users,email',
+            'email' => 'required|unique:users,email',
             'username' => 'required|unique:users,username',
-            'password' => 'required|min:8|confirmed',
+            'password' => [
+                'required',
+                'min:8',
+                'confirmed',
+                'regex:/^(?=.*[a-zA-Z])(?=.*\d).+$/'
+            ],
             'password_confirmation' => 'required|same:password',
         ];
+
+         
     }
 }

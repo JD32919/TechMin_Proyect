@@ -23,7 +23,7 @@
                 <p class="discount">-6%</p>
             </div>
             <p class="new-price">$235,000</p>
-            <button class="cart-button" onclick="location.href='#cart-section'">
+            <button class="cart-button" onclick="location.href='{{ route('dashboard') }}'">
                 <img src="assets/image/carrito.png" alt="Carrito">
             </button>
         </div>
@@ -47,7 +47,7 @@
                 <p class="discount">-6%</p>
             </div>
             <p class="new-price">$235,000</p>
-            <button class="cart-button" onclick="location.href='#cart-section'">
+            <button class="cart-button" onclick="location.href='{{ route('dashboard') }}'">
                 <img src="assets/image/carrito.png" alt="Carrito">
             </button>
         </div>
@@ -71,7 +71,7 @@
                 <p class="discount">-6%</p>
             </div>
             <p class="new-price">$235,000</p>
-            <button class="cart-button" onclick="location.href='#cart-section'">
+            <button class="cart-button" onclick="location.href='{{ route('dashboard') }}'">
                 <img src="assets/image/carrito.png" alt="Carrito">
             </button>
         </div>
@@ -95,7 +95,7 @@
                 <p class="discount">-6%</p>
             </div>
             <p class="new-price">$235,000</p>
-            <button class="cart-button" onclick="location.href='#cart-section'">
+            <button class="cart-button" onclick="location.href='{{ route('dashboard') }}'">
                 <img src="assets/image/carrito.png" alt="Carrito">
             </button>
         </div>
@@ -119,7 +119,7 @@
                 <p class="discount">-6%</p>
             </div>
             <p class="new-price">$235,000</p>
-            <button class="cart-button" onclick="location.href='#cart-section'">
+            <button class="cart-button" onclick="location.href='{{ route('dashboard') }}'">
                 <img src="assets/image/carrito.png" alt="Carrito">
             </button>
         </div>
@@ -143,7 +143,7 @@
                 <p class="discount">-6%</p>
             </div>
             <p class="new-price">$235,000</p>
-            <button class="cart-button" onclick="location.href='#cart-section'">
+            <button class="cart-button" onclick="location.href='{{ route('dashboard') }}'">
                 <img src="assets/image/carrito.png" alt="Carrito">
             </button>
         </div>
@@ -167,7 +167,7 @@
                 <p class="discount">-6%</p>
             </div>
             <p class="new-price">$235,000</p>
-            <button class="cart-button" onclick="location.href='#cart-section'">
+            <button class="cart-button" onclick="location.href='{{ route('dashboard') }}'">
                 <img src="assets/image/carrito.png" alt="Carrito">
             </button>
         </div>
@@ -191,7 +191,7 @@
                 <p class="discount">-6%</p>
             </div>
             <p class="new-price">$235,000</p>
-            <button class="cart-button" onclick="location.href='#cart-section'">
+            <button class="cart-button" onclick="location.href='{{ route('dashboard') }}'">
                 <img src="assets/image/carrito.png" alt="Carrito">
             </button>
         </div>
