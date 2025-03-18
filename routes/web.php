@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\SocialAuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\StockController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -68,6 +69,24 @@ Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name(
 Route::get('/reset-password-dev', function () {
     return view('auth.reset-password', ['token' => 'token-de-prueba']);
 });
+
+
+// Ruta para ver productos
+Route::get('/stock', [StockController::class, 'index'])->name('stock.index');
+
+// Ruta para agregar producto
+Route::get('/stock/create', [StockController::class, 'create'])->name('stock.create');
+Route::post('/stock', [StockController::class, 'store'])->name('stock.store');
+
+// Ruta para editar producto
+Route::get('/stock/{id}/edit', [StockController::class, 'edit'])->name('stock.edit');
+Route::put('/stock/{id}', [StockController::class, 'update'])->name('stock.update');
+
+// Ruta para eliminar producto
+Route::delete('/stock/{id}', [StockController::class, 'destroy'])->name('stock.destroy');
+
+
+
 
 /*Route::get('/register', [RegisterController::class, 'show']);
 

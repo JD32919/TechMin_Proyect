@@ -9,6 +9,8 @@ class Stock extends Model
 {
     use HasFactory;
 
+    protected $table ='stock';
+
     protected $fillable = [
         'title',
         'image',
