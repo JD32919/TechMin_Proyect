@@ -11,8 +11,8 @@ class StockController extends Controller
     //Mostrar productos
     public function index()
     {
-        $stock = $stock::all();
-        return view('stock.index', compact('stock'));
+        $stock = Stock::all();
+        return view('stock.stock', compact('stock'));
     }
 
     // Mostrar formulario para crear producto
@@ -49,7 +49,7 @@ class StockController extends Controller
 
         Stock::create($validatedData);
 
-        return redirect()->route('stock.index')->with('success', 'Producto agregado correctamente.');
+        return redirect()->route('stock.stock')->with('success', 'Producto agregado correctamente.');
     }
 
     // Mostrar formulario para editar
@@ -89,7 +89,7 @@ class StockController extends Controller
 
         $stock->update($validatedData);
 
-        return redirect()->route('stock.index')->with('success', 'Producto actualizado correctamente.');
+        return redirect()->route('stock.stock')->with('success', 'Producto actualizado correctamente.');
     }
 
     // Eliminar producto
@@ -98,7 +98,7 @@ class StockController extends Controller
         $stock = Stock::findOrFail($id);
         $stock->delete();
 
-        return redirect()->route('stock.index')->with('success', 'Producto eliminado correctamente.');
+        return redirect()->route('stock.stock')->with('success', 'Producto eliminado correctamente.');
     }
 
      

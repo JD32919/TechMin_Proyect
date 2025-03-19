@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFF;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto; /* Habilita el scroll vertical */
+    font-family: "Manrope", sans-serif;
+}

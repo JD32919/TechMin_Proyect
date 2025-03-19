@@ -1,0 +1,176 @@
+.sidebar *,
+.sidebar *::after,
+.sidebar *::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ 
+.sidebar{
+
+    font-family: "Manrope", sans-serif;
+    position: fixed; /* Fijar la barra lateral */
+    left: 0; /* Pegada a la izquierda */
+    top: 60px;
+    height: calc(100vh - 60px); /* Altura completa */
+    background-color: #0F161E;
+    width: max-content;
+    border-radius: 0 20px 20px 0; /* Solo redondeo en derecha */
+    padding: 2rem 1rem;
+    color: #FFFF;
+    z-index: 1000; /* Asegura que esté sobre el contenido */
+   
+}
+
+.sidebar:hover .sidebar__element{
+
+    grid-template-columns: 40px 1fr; 
+}
+
+.sidebar__list{
+
+   align-items: center;
+   padding: 0;
+   list-style: none ;
+   display: flex;
+   flex-direction: column;
+   gap: .4 rem;
+   min-height: 600px; 
+}
+
+.sidebar__element{
+    padding: 0.8rem 1.3rem;
+    border-radius: 3px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px 0fr;
+    
+    color: #FFFF; 
+    
+    transition: all left 0.3s ease-in-out;
+
+    /*Lineas de separación*/
+    
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    color:#FFFF;
+}
+
+.sidebar__element::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%; /* Adjust as needed */
+    right: 20%; /* Adjust as needed */
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar__element:last-child::after {
+    display: none;
+}
+
+.sidebar__element:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.sidebar__icon--logo{
+    margin-bottom:0;
+    max-width: 80px;
+    height: auto;
+
+}
+
+.sidebar__logo,.sidebar__text{
+    padding-left: 1rem;
+}
+
+.sidebar__icon{
+    width: 100px;
+    overflow: hidden;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+}
+
+.sidebar__text {
+    font-size: 14px;
+    
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animación suave */
+    white-space: nowrap;
+}
+
+.sidebar__hide{
+    overflow:hidden;
+}
+
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0F161E;
+    border: 2px solid #FCE803;
+    border-radius: 30px;
+    padding: 8px 20px;
+    margin:15px auto;
+    width: fit-content;
+    max-width: 80%;
+}
+
+.avatar:contains("Administrator"),
+.avatar[data-role="admin"],
+.sidebar__element:contains("Administrator") {
+    display: none !important;
+}
+
+.sidebar__element.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.sidebar:hover .sidebar__text {
+    opacity: 1;
+    transform: translateX(0);
+}
+.categories {
+    display: none; /* Ocultamos los botones inicialmente */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.category-btn {
+    background-color: transparent;
+    border: 2px solid #FCE803;
+    color: #FCE803;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 5px; /* Espaciado entre botones */
+}
+
+/* Segunda fila centrada y más pegada */
+.center-row {
+    justify-content: center;
+    gap: 0px; /* Pegados entre sí */
+}
+
+/* Efecto hover */
+.category-btn:hover {
+    background-color: #FCE803;
+    color: black;
+    transform: scale(1.05);
+}
+
+ 

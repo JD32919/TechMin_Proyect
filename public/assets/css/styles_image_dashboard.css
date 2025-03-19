@@ -1,0 +1,51 @@
+.image-category {
+    position: relative;
+    width: 100%;
+    max-width: 1050px; /* Ajusta según necesites */
+     
+    margin-left: 220px;
+    margin-top: 30px;
+}
+
+.image-category img {
+    width: 100%;
+    border-radius: 15px; /* Bordes redondeados */
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: -16%;
+    margin-left: -40px;
+    left: 5%;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+     
+}
+
+.add-product-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0F161E;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 13px 20px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.add-product-btn svg{
+    width: 22px; /* Ícono más grande */
+    height: 22px;
+}
+
+.add-product-btn:hover {
+    background-color: #FCE803;
+    color: #0F161E;
+}

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* Estructura del Header */
+.header-custom-s {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #FFFFFF ;
+    position: relative;
+    
+}
+
+.header-custom-s .separator{
+    width: 75%; /* Ajusta el ancho de la línea */
+    height: 1px; /* Grosor de la línea */
+    background-color: #0F161E; /* Color de la línea */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar la línea */
+    margin-left: 65px;
+}
+
+.header-custom-s .navbar_search{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 500px;
+}
+
+.header-custom-s .navbar_search input{
+    width: 250px;
+    padding: 8px 30px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.header-custom-s .navbar_search .icon-search{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-search:hover {
+    transform: scale(1.1);  
+}
+ 
+.header-custom-s .user_menu{
+    display: flex;
+    align-items: center; /* Asegura que la imagen y el botón estén alineados */
+    gap: 15px;
+    margin-right: 57px;
+}
+
+.header-custom-s .user_menu img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+     
+    background: #ddd; /* Espacio reservado para imágenes */
+    border: 1px solid #0F161E;
+}
+
+.header-custom-s .user_menu .btn-logout{
+    background: transparent;
+    color:  #0F161E;
+    border: 0.5px solid  #0F161E;
+    border-width: 30%;
+    border-radius: 20px;
+    padding: 5px 13px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-custom-s .user_menu .btn-logout:hover {
+    background-color: #0F161E;
+    color: #FCE803;
+
+}
+
+/* Estilos Responsivos */
+@media (max-width: 600px) {
+    .header-custom-s {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
