@@ -25,15 +25,18 @@ class StockController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'id' => 'required|integer|unique:stock,id',
             'title' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'image_url' => 'nullable|url', // HTTPS
-            'rating' => 'integer|min:0|max:5',
-            'reviews' => 'integer|min:0',
+            'rating' => 'nullable|integer|min:0|max:5',
+            'reviews' => 'nullable|integer|min:0',
             'old_price' => 'nullable|numeric',
             'new_price' => 'required|numeric|min:0',
             'discount' => 'nullable|integer|min:0|max:100',
         ]);
+
+         
 
         if ($request->hasFile('image')) {
             // Guardar imagen localmente en storage/app/public/products
@@ -52,6 +55,7 @@ class StockController extends Controller
         return redirect()->route('stock.stock')->with('success', 'Producto agregado correctamente.');
     }
 
+
     // Mostrar formulario para editar
     public function edit($id)
     {
@@ -63,11 +67,12 @@ class StockController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
+            'id' => 'required|integer|unique:stock,id,' . $id, // Permitir mismo ID
             'title' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image_url' => 'nullable|url', // HTTPS
-            'rating' => 'integer|min:0|max:5',
-            'reviews' => 'integer|min:0',
+            'image_url' => 'nullable|url',
+            'rating' => 'nullable|integer|min:0|max:5',
+            'reviews' => 'nullable|integer|min:0',
             'old_price' => 'nullable|numeric',
             'new_price' => 'required|numeric|min:0',
             'discount' => 'nullable|integer|min:0|max:100',
@@ -101,5 +106,6 @@ class StockController extends Controller
         return redirect()->route('stock.stock')->with('success', 'Producto eliminado correctamente.');
     }
 
-     
+    
+ 
 }

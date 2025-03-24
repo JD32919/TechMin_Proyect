@@ -8,10 +8,11 @@
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
-
+    
     <table class="table table-bordered">
         <thead>
             <tr>
+                <th>ID</th> <!-- Nueva columna para el ID -->
                 <th>Título</th>
                 <th>Imagen</th>
                 <th>Precio Anterior</th>
@@ -23,6 +24,7 @@
         <tbody>
             @foreach($stock as $product)
                 <tr>
+                    <td>{{ $product->id }}</td> <!-- Mostrar ID del producto -->
                     <td>{{ $product->title }}</td>
                     <td>
                         @if(Str::startsWith($product->image, 'http'))
@@ -48,3 +50,4 @@
     </table>
 </div>
 @endsection
+

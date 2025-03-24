@@ -1,61 +1,67 @@
-function toggleCategories() {
-    var categories = document.getElementById("categories");
-    if (categories.style.display === "none" || categories.style.display === "") {
-        categories.style.display = "block"; // Muestra la sección
-    } else {
-        categories.style.display = "none"; // Oculta la sección
-    }
-}
 
-document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(() => {
-        document.querySelector(".categories").classList.add("show-categories");
-    }, 1000); // Aparece después de 1 segundo
-});
-
-// Función para cargar contenido dinámico
-function loadContent(event, page) {
-    event.preventDefault(); // Evita la recarga de la página
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle sidebar collapse
+    const toggleArrow = document.querySelector('.menu-btn');
+    const sidebar = document.querySelector('.sidebar');
+    const brand = document.querySelector('.brand'); // Seleccionamos el header
     
-    const contentDiv = document.getElementById("content");
-    contentDiv.innerHTML = "<h3>Cargando...</h3>"; // Muestra un mensaje mientras carga
+    toggleArrow.addEventListener('click', function() {
+        sidebar.classList.toggle('collapsed');
 
-    fetch(page)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Página no encontrada");
-            }
-            return response.text();
-        })
-        .then(data => {
-            contentDiv.innerHTML = data; // Inserta el contenido en la página
-            history.pushState(null, "", page); // Actualiza la URL sin recargar
-            updateActiveMenu(page);
-        })
-        .catch(error => {
-            contentDiv.innerHTML = "<h2>Error 404</h2><p>El contenido no está disponible.</p>";
-        });
-}
-
-// Función para resaltar la opción activa del menú
-function updateActiveMenu(page) {
-    const links = document.querySelectorAll("nav ul li a");
-    links.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === page) {
-            link.classList.add("active");
+        // Si el header existe, también le agregamos la clase collapsed
+        if (brand) {
+            brand.classList.toggle('collapsed');
         }
     });
-}
-
-// Maneja la navegación con el botón "Atrás" del navegador
-window.onpopstate = function () {
-    const path = window.location.pathname.substring(1);
-    loadContent(new Event("popstate"), path || "home.html");
-};
-
-// Cargar contenido inicial según la URL
-document.addEventListener("DOMContentLoaded", function () {
-    const path = window.location.pathname.substring(1) || "home.html";
-    loadContent(new Event("load"), path);
+    
+    // Toggle submenu for Categories
+    const subMenuToggle = document.querySelector('.menu-item-dropdown .menu-link');
+    const subMenu = document.querySelector('.sub-menu');
+    
+    subMenuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        subMenu.classList.toggle('expanded');
+        document.querySelector('.menu-item-dropdown').classList.toggle('active');
+        
+        // If sidebar is collapsed, expand it when submenu is toggled
+        if (sidebar.classList.contains('collapsed')) {
+            sidebar.classList.remove('collapsed');
+            
+            // También aseguramos que el header se muestre
+            if (brand) {
+                brand.classList.remove('collapsed');
+            }
+        }
+    });
 });
+
+ 
+ 
+ 
+ 
+ 
+ const menuItemsDropDown = document.querySelectorAll('.menu-item-dropdown');
+ const sidebar = document.getElementById('sidebar');
+ const menuBtn = document.getElementById('menu-btn');
+
+ menuBtn.addEventListener('click',()=>{
+   sidebar.classList.toggle('minimize'); 
+ });
+
+ menuItemsDropDown.forEach((menuItem)=>{
+    menuItem.addEventListener('click',()=>{
+         const subMenu = menuItem.querySelector('.sub-menu');
+         const isActive = menuItem.classList.toggle('sub-menu-toggle');
+         if(subMenu){
+             if(isActive){
+                 subMenu.style.height =`${subMenu.scrollHeight +6}px`;
+                subMenu.style.padding = '0.2rem 0';
+            }else{
+                    
+                subMenu.style.height= '0';
+                 subMenu.style.padding='0';
+                
+            }
+         }
+    });
+ });

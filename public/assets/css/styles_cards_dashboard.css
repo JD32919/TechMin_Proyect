@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.Carousel-section {
+    font-family: 'Manrope', sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /* Ajusta el tamaño de las columnas */
+    gap: 30px; /* Espaciado entre tarjetas */
+    width: 86%;
+    max-width: 1100px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    border: 2px solid #E0E0E0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 80%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card .title {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: -1px;
+}
+
+.card .id{
+    margin-top: -2px;
+    text-align: center
+    ;
+}
+
+.card .stars{
+     
+    justify-content: center;
+    text-align: 
+    center;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    
+
+}
+
+.card .old-price{
+    font-size: 16px;
+    color: #888;
+    text-decoration: line-through;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    margin-right: 44px;
+
+}
+
+.card .price-cart-container{
+    display: flex;
+     
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.card .new-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 50px;
+    
+}
+
+.card .cart-button {
+    background-color: #FCE803;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 60px;
+    
+}
+
+.card .cart-button img {
+    width: 21px;
+    height: 21px;
+    margin-top: 10px;
+}
+
+ 

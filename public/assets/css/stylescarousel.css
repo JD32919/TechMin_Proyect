@@ -21,7 +21,7 @@
     position: relative; /* Ajusta la posición, puedes usar valores como 'absolute' si necesitas */
     /* Agrega otras propiedades de posición según tus necesidades */
 }
-
+ 
 .Carousel-section h3 {
     font-size: 25px; /* Ajusta el tamaño del texto */
     margin-top: 150px; /* Ajusta el margen superior */

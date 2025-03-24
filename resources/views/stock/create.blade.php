@@ -1,11 +1,31 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-@section('content')
+
+    <link rel="stylesheet" href="{{ asset('assets/css/styles_dashboard_myModal.css') }}">
+    
+</head>
+<body>
+
+ 
+
+ 
 <div class="container">
     <h1>Agregar Producto</h1>
 
-    <form action="{{ route('stock.store') }}" method="POST">
+    <form action="{{ route('stock.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+
+        <!-- Campo para ingresar el ID manualmente -->
+        <div class="form-group">
+            <label>ID del Producto:</label>
+            <input type="number" name="id" class="form-control" required>
+        </div>
+
         <div class="form-group">
             <label>Título:</label>
             <input type="text" name="title" class="form-control" required>
@@ -39,4 +59,8 @@
         <button type="submit" class="btn btn-success">Guardar</button>
     </form>
 </div>
-@endsection
+ 
+    
+</body>
+</html>
+

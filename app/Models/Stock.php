@@ -11,7 +11,11 @@ class Stock extends Model
 
     protected $table ='stock';
 
+    public $incrementing = false;
+    protected $keyType = 'int';
+
     protected $fillable = [
+        'id',
         'title',
         'image',
         'rating',

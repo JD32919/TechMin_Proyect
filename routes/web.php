@@ -85,7 +85,7 @@ Route::put('/stock/{id}', [StockController::class, 'update'])->name('stock.updat
 // Ruta para eliminar producto
 Route::delete('/stock/{id}', [StockController::class, 'destroy'])->name('stock.destroy');
 
-
+Route::get('/graficas', [DashboardController::class, 'index'])->name('graficas');
 
 
 /*Route::get('/register', [RegisterController::class, 'show']);
