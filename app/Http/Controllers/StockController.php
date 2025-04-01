@@ -14,7 +14,7 @@ class StockController extends Controller
         $stock = Stock::all();
         return view('stock.stock', compact('stock'));
     }
-
+ 
     // Mostrar formulario para crear producto
     public function create()
     {
@@ -23,34 +23,46 @@ class StockController extends Controller
 
     // Guardar producto
     public function store(Request $request)
+
     {
+         
         $validatedData = $request->validate([
-            'id' => 'required|integer|unique:stock,id',
+            'id' => 'required|integer|min:1', 
             'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image_url' => 'nullable|url', // HTTPS
-            'rating' => 'nullable|integer|min:0|max:5',
-            'reviews' => 'nullable|integer|min:0',
-            'old_price' => 'nullable|numeric',
+            //'image_url' => 'nullable|url', // HTTPS
+            //'rating' => 'nullable|integer|min:0|max:5',
+            //'reviews' => 'nullable|integer|min:0',
+            //'old_price' => 'nullable|numeric',
             'new_price' => 'required|numeric|min:0',
             'discount' => 'nullable|integer|min:0|max:100',
         ]);
 
          
 
+        // Procesar la imagen si existe
         if ($request->hasFile('image')) {
-            // Guardar imagen localmente en storage/app/public/products
-            $imagePath = $request->file('image')->store('products', 'public');
-            $validatedData['image'] = '/storage/' . $imagePath;
-        } elseif ($request->filled('image_url')) {
-            // Usar URL externa si no se sube imagen local
-            $validatedData['image'] = $request->image_url;
+            $image = $request->file('image');
+            $imageName = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
+            $image->move(public_path('storage/products'), $imageName);
+        
+             
+            $validatedData['image'] = 'storage/products/' . $imageName;
         } else {
-            
-            $validatedData['image'] = '/storage/products/default.jpg';
+            $validatedData['image'] = null;  
         }
 
-        Stock::create($validatedData);
+        // Crear el producto
+        Stock::create([
+            'id' => $validatedData['id'],
+            'title' => $validatedData['title'],
+            'description' => $validatedData['description'],
+            'image' => $validatedData['image'], // Ruta de la imagen
+            'new_price' => $validatedData['new_price'],
+            'discount' => $validatedData['discount'] ?? 0,
+        ]);
+
 
         return redirect()->route('stock.stock')->with('success', 'Producto agregado correctamente.');
     }

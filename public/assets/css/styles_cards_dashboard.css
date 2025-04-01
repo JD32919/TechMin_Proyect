@@ -39,6 +39,11 @@
     border-radius: 10px;
     margin-bottom: 10px;
 }
+.card .imgv {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 
 .card .title {
     font-size: 14px;

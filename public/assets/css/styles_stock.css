@@ -1,0 +1,160 @@
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    background-color: #ffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight:400;
+    margin-left: 17px;
+}
+
+.user-dropdown {
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 23px;
+}
+
+/* CONTENEDOR */
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* TITULO */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* BOTÓN AGREGAR PRODUCTO */
+.add-product-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #FCE803;
+    color: #121c27;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.add-product-btn svg{
+    width: 22px; /* Ícono más grande */
+    height: 22px;
+    vertical-align: middle;
+     
+}
+
+.add-product-btn:hover {
+    background-color: #0F161E;
+    color: #ffff;
+}
+
+/* MENSAJE DE ÉXITO */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+td{
+    font-size: 14px;
+}
+th {
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #f8f9fa;
+}
+
+/* IMÁGENES */
+td img {
+    width: 90px;
+    border-radius: 5px;
+}
+
+.icon-btn {
+    gap: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out; /* Agregamos una animación de transformación */
+}
+
+/* HOVER: Aumenta el tamaño al 1.2x (20% más grande) */
+.icon-btn:hover {
+    transform: scale(1.2);
+}
+
+/* ÍCONO DE EDITAR (LÁPIZ) */
+ 
+
+.edit-btn svg{
+    width: 22px; /* Ícono más grande */
+    height: 22px;
+    color: #0F161E;
+     
+    
+}
+
+ 
+
+.delete-btn svg{
+    width: 22px; /* Ícono más grande */
+    height: 22px;
+    color: #0F161E;
+     
+
+}
+
+ 

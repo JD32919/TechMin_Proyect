@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('stock', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->primary();
             $table->string('title')->index();
+            $table->text('description')->nullable(); 
             $table->string('image');
             $table->integer('rating')->nullable(); 
             $table->integer('reviews')->nullable();
@@ -23,7 +24,7 @@ return new class extends Migration
             $table->timestamps();
         });
     }
-
+ 
     /**
      * Reverse the migrations.
      */

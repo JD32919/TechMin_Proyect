@@ -1,66 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+@extends('layouts.app')
 
-
-    <link rel="stylesheet" href="{{ asset('assets/css/styles_dashboard_myModal.css') }}">
-    
-</head>
-<body>
-
- 
-
- 
+@section('content')
 <div class="container">
-    <h1>Agregar Producto</h1>
+    <h2 class="mb-4">Agregar Nuevo Producto</h2>
 
+    {{-- Mostrar errores de validación --}}
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    {{-- Formulario para crear producto --}}
     <form action="{{ route('stock.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
-        <!-- Campo para ingresar el ID manualmente -->
-        <div class="form-group">
-            <label>ID del Producto:</label>
-            <input type="number" name="id" class="form-control" required>
+        {{-- ID del producto --}}
+        <div class="form-group mb-3">
+            <label for="id">ID del Producto:</label>
+            <input type="number" class="form-control" id="id" name="id" required>
         </div>
 
-        <div class="form-group">
-            <label>Título:</label>
-            <input type="text" name="title" class="form-control" required>
+        {{-- Título del producto --}}
+        <div class="form-group mb-3">
+            <label for="title">Título:</label>
+            <input type="text" class="form-control" id="title" name="title" required>
         </div>
 
-        <div class="form-group">
-            <label>Subir Imagen desde tu Equipo:</label>
-            <input type="file" name="image" class="form-control">
+        {{-- Descripción del producto --}}
+        <div class="form-group mb-3">
+            <label for="description">Descripción:</label>
+            <textarea class="form-control" id="description" name="description" rows="4"></textarea>
         </div>
 
-        <div class="form-group">
-            <label>O ingresar URL de la Imagen:</label>
-            <input type="url" name="image_url" class="form-control">
+        {{-- Imagen del producto --}}
+        <div class="form-group mb-3">
+            <label for="image">Imagen:</label>
+            <input type="file" class="form-control-file" id="image" name="image">
         </div>
 
-        <div class="form-group">
-            <label>Precio Anterior:</label>
-            <input type="number" step="0.01" name="old_price" class="form-control">
+        {{-- Precio nuevo --}}
+        <div class="form-group mb-3">
+            <label for="new_price">Precio Nuevo:</label>
+            <input type="number" step="0.01" class="form-control" id="new_price" name="new_price" required>
         </div>
 
-        <div class="form-group">
-            <label>Precio Actual:</label>
-            <input type="number" step="0.01" name="new_price" class="form-control" required>
+        {{-- Descuento --}}
+        <div class="form-group mb-3">
+            <label for="discount">Descuento (%):</label>
+            <input type="number" class="form-control" id="discount" name="discount" min="0" max="100">
         </div>
 
-        <div class="form-group">
-            <label>Descuento (%):</label>
-            <input type="number" name="discount" class="form-control">
-        </div>
-
-        <button type="submit" class="btn btn-success">Guardar</button>
+        {{-- Botón para enviar --}}
+        <button type="submit" class="btn btn-primary">Guardar Producto</button>
     </form>
 </div>
- 
-    
-</body>
-</html>
-
+@endsection

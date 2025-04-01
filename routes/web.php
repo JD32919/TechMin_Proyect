@@ -87,7 +87,13 @@ Route::delete('/stock/{id}', [StockController::class, 'destroy'])->name('stock.d
 
 Route::get('/graficas', [DashboardController::class, 'index'])->name('graficas');
 
+Route::get('/offers', function () {
+    return view('stock.offers');
+})->name('offers');
 
+Route::get('/orders', function () {
+    return view('stock.orders');
+});
 /*Route::get('/register', [RegisterController::class, 'show']);
 
 Route::post('/register',[RegisterController::class, 'register']);

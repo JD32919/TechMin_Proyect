@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+/* Estilos para el modal */
+.modal2 {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+}
+
+/* Contenido del modal */
+.modal-content2 {
+    background-color: #ffff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%; /* Ajusta el ancho si es necesario */
+    height: 100vh;
+    padding: 20px;
+    border: none;
+    box-shadow:  none;
+    overflow-y: auto;
+    border-radius: 0; /* Sin bordes redondeados */
+    margin: 0;
+}
+
+/* Botón para cerrar */
+.close2 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content2 {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación para cerrar modal */
+@keyframes slideOutUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+ 
+
+
+ 
+
+ 
+  
+ 
+
+
+/* Estructura del Header */
+.header-custom-s {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #FFFFFF ;
+    position: relative;
+    
+}
+
+.header-custom-s .separator{
+    width: 83%; /* Ajusta el ancho de la línea */
+    height: 1px; /* Grosor de la línea */
+    background-color: #0F161E; /* Color de la línea */
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    transform: translateX(-50%); /* Centrar la línea */
+    align-items: center;
+    
+}
+
+.header-custom-s .navbar_search{
+    position: relative;
+    display: flex;
+    align-items: center;
+     
+}
+
+.header-custom-s .navbar_search input{
+    width: 250px;
+    padding: 8px 30px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    margin-left: -20px;
+}
+
+.header-custom-s .navbar_search .icon-search{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-search:hover {
+    transform: scale(1.1);  
+}
+ 
+.header-custom-s .user_menu{
+    display: flex;
+    align-items: center; /* Asegura que la imagen y el botón estén alineados */
+    gap: 15px;
+    margin-right: 42px;
+}
+
+.header-custom-s .user_menu img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+     
+    background: #ddd; /* Espacio reservado para imágenes */
+    border: 1px solid #0F161E;
+}
+
+.header-custom-s .user_menu .btn-logout{
+    background: transparent;
+    color:  #0F161E;
+    border: 0.5px solid  #0F161E;
+    border-width: 30%;
+    border-radius: 20px;
+    padding: 5px 13px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-custom-s .user_menu .btn-logout:hover {
+    background-color: #0F161E;
+    color: #FCE803;
+
+}
+
+/* Estilos Responsivos */
+@media (max-width: 600px) {
+    .header-custom-s {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+/*Estilos Informacion*/
+.informacion-A {
+    font-family: 'Manrope', sans-serif;
+    max-width: 700px;
+    margin-top: 80px;
+    margin-bottom: 2px;
+    text-align: justify;
+    margin-left: 145px;
+}
+  
+  .informacion-A h2 {
+    color: #0F161E;
+    font-size: 75px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+  
+  .informacion-A .subtitulo {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #0F161E;
+}
+  
+  .informacion-A .descripcion {
+    font-size: 17px;
+    color: #8f8e8e;
+    margin-bottom: -55px;
+}
+
+.informacion-B {
+    font-family: 'Manrope', sans-serif;
+    max-width: 800px;
+    margin-top: 100px;
+    margin-bottom: 2px;
+    text-align: justify;
+    margin-left: 145px;
+}
+   
+  .informacion-B .subtitulo {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #0F161E;
+}
+  
+  .informacion-B .descripcion {
+    font-size: 17px;
+    color: #8f8e8e;
+    margin-bottom: -55px;
+}
+
+
+.informacion-C {
+    font-family: 'Manrope', sans-serif;
+    max-width: 800px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    text-align: justify;
+    margin-left: 145px;
+}
+   
+  .informacion-C .subtitulo {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #0F161E;
+}
+  
+  .informacion-C .descripcion {
+    font-size: 17px;
+    color: #8f8e8e;
+    margin-bottom: -55px;
+}
+
+
+ 
+
+/* Estilos Carousel */
+.Carousel-section-o {
+    font-family: 'Manrope', sans-serif;
+    background-color:#FFFFFF;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    width: 100%;
+}
+
+ 
+
+
+.Carousel-section-o .swiper {
+    width: 80%;
+    max-width: 1200px;
+}
+
+.Carousel-section-o .swiper-slide {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    width: 320px; /*ancho de la card*/
+}
+
+.Carousel-section-o .swiper-slide img {
+    max-width: 100%; /*tamaño de la imagen*/
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.Carousel-section-o .offer-icon img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent; /*color del fondo icono*/
+    border-radius: 50%; /*redondea los bordes del icono*/
+}
+
+.Carousel-section-o .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.Carousel-section-o .id {
+    font-size: 12px;
+    color: #999;
+    text-align: justify;
+    margin-top: -3px;
+}
+
+.Carousel-section-o .rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px 0;
+    margin-top: -3%;
+}
+
+.Carousel-section-o .rating-row {
+    display: flex;
+    align-items: center;
+    margin-top: -2%;
+}
+
+.Carousel-section-o .rating img {
+    width: 20px;
+    height: 20px;
+    margin-top: 11px;
+    margin-right: 5px;
+}
+
+.Carousel-section-o .stars {
+    color: #FFD700;
+    margin-bottom: 2px;
+}
+
+.Carousel-section-o .reviews {
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.Carousel-section-o .price-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 15px 0;
+    margin-top: -10%;
+}
+
+.Carousel-section-o .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+    font-size: 20;
+}
+
+.Carousel-section-o .discount {
+    color: #333;
+    font-size: 6;
+    background-color: #FFD700;
+    padding: auto;
+}
+
+.Carousel-section-o .new-price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 6px;
+    text-align: justify;
+    flex-grow: 1;
+    margin-top: -7%;
+}
+
+.Carousel-section-o .cart-button {
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-top: -18%;
+    margin-right: -3%;
+}
+
+.Carousel-section-o .cart-button img {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+.Carousel-section-o .cart-button:hover {
+    background-color: #FFD700;
+}
+
+.Carousel-section-o .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.Carousel-section-o .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: opacity 0.3s ease;
+}
+
+.Carousel-section-o .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ffcc00;
+}
+
+
+ 
+
+ 
+
+ 
