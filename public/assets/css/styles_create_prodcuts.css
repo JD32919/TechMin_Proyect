@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.body-de-create {
+    font-family: 'Manrope', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+     
+    width: 700px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h2.logo {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+
+.id-del-producto label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+     
+}
+
+.id-del-producto input {
+    width: 27%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #F2F2F2;
+    
+}
+
+
+.descripción-del-producto label {
+    font-weight: bold;
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.descripción-del-producto input, textarea, select {
+    width: 70px;
+    height: 100px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #F2F2F2;
+    font-size: 14px;
+}
+
+#editor-container {
+    height: 120px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+}
+
+
+.ql-toolbar {
+    display: flex;
+    justify-content: center; /* Mueve los botones a la derecha */
+    border-radius: 8px; 
+    background-color: #fff; 
+    border: 1px solid #ccc;
+    padding: 6px;
+    margin-top: 10px;
+    
+}
+
+.ql-toolbar button {
+    border-radius: 5px; /* Botones redondeados */
+    padding: 5px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+/* Efecto hover en los botones */
+.ql-toolbar button:hover {
+    background-color: #ddd;
+}
+
+
+.titulo-del-producto label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.titulo-del-producto input{
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #F2F2F2;
+
+} 
+
+
+.image-del-producto label{
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+
+}
+
+.image-del-producto {
+    text-align: left;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: -2px;
+}
+
+.upload-box {
+    width: 120px;
+    height: 90px;
+    border-radius: 10%; /* Hace que el botón sea redondo */
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 2px dashed #aaa;
+    text-align: center;
+    flex-direction: column;
+}
+
+.upload-box:hover {
+    background-color: #d6d6d6;
+}
+
+.upload-box img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10%;
+}
+
+.upload-box span {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Espacio entre el icono y el texto */
+    margin-top: 35px;
+}
+.upload-box span::before {
+     
+    font-size: 12px; /* Tamaño más grande para la nube */
+    display: block;
+}
+
+#image {
+    display: none; /* Oculta el input de carga */
+}
+
+.precio-nuevo label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.precio-nuevo input{
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #F2F2F2;
+    font-size: 14px;
+
+} 
+
+
+.descuento label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.descuento input{
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #F2F2F2;
+
+} 
+
+ 
+ 
+
+ 
+.btn-save {
+    width: 100%;
+    background-color: #FCE803 ;
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}

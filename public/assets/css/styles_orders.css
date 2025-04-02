@@ -26,7 +26,7 @@ body {
     background-color: #0F161E; /* Color de la línea */
     position: absolute;
     bottom: 0;
-    left: 46%;
+    left: 50%;
     transform: translateX(-50%); /* Centrar la línea */
     align-items: center;
     
@@ -45,7 +45,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 20px;
     outline: none;
-    margin-left: -30px;
+    margin-left: 480px;
 }
 
 .header-custom-s .navbar_search .icon-search{
@@ -56,7 +56,7 @@ body {
     height: 20px;
     transition: transform 0.2s ease-in-out;
 }
-
+ 
 .icon-search:hover {
     transform: scale(1.1);  
 }
@@ -65,7 +65,7 @@ body {
     display: flex;
     align-items: center; /* Asegura que la imagen y el botón estén alineados */
     gap: 15px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .header-custom-s .user_menu img{

@@ -200,7 +200,7 @@ const categoryData = {
                 oldPrice: '$160,000',
                 newPrice: '$150,000'
             }
-        ]
+        ] 
     },
     'backhoe-excavators': {
         image: 'assets/image/backhoe_excavator_category.png',

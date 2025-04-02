@@ -13,6 +13,7 @@ function openModal() {
         })
         .then(data => {
             document.getElementById('modal-body').innerHTML = data;
+            inicializarCreateJS(); // Llamar a la función que activa el JS de create
         })
         .catch(error => {
             console.error('Error al cargar el formulario:', error);
@@ -37,4 +38,62 @@ window.onclick = function(event) {
     if (event.target === modal) {
         closeModal();
     }
+}
+
+// Función para inicializar el JavaScript de la vista create dentro del modal
+function inicializarCreateJS() {
+    // Esperar un breve momento para asegurarnos de que el DOM del modal se haya cargado
+    setTimeout(function() {
+        var editorContainer = document.getElementById("editor-container");
+        if (editorContainer) {
+            // Inicializar Quill.js
+            var quill = new Quill('#editor-container', {
+                theme: 'snow',
+                placeholder: 'Escribe la descripción aquí...',
+                modules: {
+                    toolbar: [
+                        ['bold', 'italic', 'strike'], // Negrita, cursiva, tachado
+                        [{ 'header': 1 }, { 'header': 2 }, { 'header': 3 }], // H1, H2, H3
+                        ['blockquote', 'code-block'], // Código y bloque de edición
+                        ['link'] // Enlace
+                    ]
+                }
+            });
+
+            // Sincroniza el contenido del editor con el textarea oculto al enviar el formulario
+            var form = document.querySelector("#modal-body form");
+            if (form) {
+                form.addEventListener("submit", function() {
+                    var descriptionInput = document.getElementById("description");
+                    if (descriptionInput) {
+                        descriptionInput.value = quill.root.innerHTML;
+                    }
+                });
+            }
+        }
+
+        // Previsualización de imagen al subir archivo
+        var imageInput = document.getElementById("image");
+        if (imageInput) {
+            imageInput.addEventListener("change", function(event) {
+                const file = event.target.files[0];
+                const preview = document.getElementById("preview-image");
+                const uploadText = document.getElementById("upload-text");
+
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        if (preview) {
+                            preview.src = e.target.result;
+                            preview.style.display = "block";
+                        }
+                        if (uploadText) {
+                            uploadText.style.display = "none"; // Oculta el texto cuando hay imagen
+                        }
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    }, 100);
 }

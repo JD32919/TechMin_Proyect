@@ -3,25 +3,33 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stock</title>
 
     <link rel="stylesheet" href="{{ asset('assets/css/styles_stock.css') }}">
 
-
+ 
  </head>
  <body>
 
     <header>
-        <div class="logo">TechMin</div>
+        <div class="logo"><a href="{{ route('index') }}">TechMin</a></div>
+         
         <div class="user-dropdown">
-            <span>Admin74 ▼</span>
+            <span>{{ auth()->user()->name ?? auth()->user()->username }} ▼</span>
+            <div class="dropdown-content">
+                 
+                <form action="/logout" method="POST" style="display: block; margin: 0; padding: 0;">
+                    @csrf
+                    <button type="submit" class="btn-logout">Logout</button>
+                </form>
+            </div>
         </div>
     </header>
 
 <div class="container">
-    <h1>Lista de Productos</h1>
+    <h1>Product List</h1>
     <a href="{{ route('stock.create') }}" class="add-product-btn">
-        Agregar Producto
+        Add Product
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="12" y1="8" x2="12" y2="16"></line>
@@ -37,12 +45,12 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Título</th>
-                <th>Imagen</th>
-                <th>Precio Anterior</th>
-                <th>Precio Actual</th>
-                <th>Descuento</th>
-                <th>Acciones</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Old Price</th>
+                <th>price</th>
+                <th>Discount</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>

@@ -11,6 +11,39 @@
     width: 100%;
     border-radius: 15px; /* Bordes redondeados */
     display: block;
+     
+}
+
+.image-category img[src*="excavators_category"] {
+    height: 100%;
+    width: 109%;
+    margin-left: -90px;
+    border: 10px;
+}
+ 
+.image-category img[src*="backhoe_excavator_category"] {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.image-category img[src*="elevated-Platforms_category"] {
+    width: 102%;
+    margin-left: -13px;
+}
+ 
+.image-category img[src*="front-loader_category"] {
+    width: 112%;
+    margin-left: -116px;
+}
+
+.image-category img[src*="tractor-bull-dozer_category"] {
+    width: 104%;
+    margin-left: -34px;
+}
+
+.image-category img[src*="luminaires_category"] {
+    width: 124%;
+    margin-left: -118px;
 }
 
 .image-overlay {

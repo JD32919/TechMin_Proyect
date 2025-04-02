@@ -25,11 +25,63 @@ header {
     font-weight:400;
     margin-left: 17px;
 }
+.logo a{
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+}
 
 .user-dropdown {
-    font-size: 15px;
+    position: relative;
+    display: inline-block;
     cursor: pointer;
-    margin-right: 23px;
+    padding: 15px;
+    margin-right: 15px;
+     
+}
+
+.user-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 105px;
+    right: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-dropdown .dropdown-content a,
+.user-dropdown .dropdown-content form {
+    display: block;
+    text-align: left;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+.user-dropdown .dropdown-content form {
+    background: none;
+    border: none;
+}
+
+.btn-logout {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background-color: #f0f0f0;
 }
 
 /* CONTENEDOR */
@@ -155,6 +207,6 @@ td img {
     color: #0F161E;
      
 
-}
+} 
 
  

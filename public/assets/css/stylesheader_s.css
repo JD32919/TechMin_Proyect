@@ -21,7 +21,7 @@
     transform: translateX(-50%); /* Centrar la línea */
 
 }
-
+ 
 /* Logo */
 .header-custom-s .logo a{
     all: unset;

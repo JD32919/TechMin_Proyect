@@ -93,7 +93,11 @@ Route::get('/offers', function () {
 
 Route::get('/orders', function () {
     return view('stock.orders');
-});
+})->name('orders');
+
+Route::get('/rating', function () {
+    return view('stock.rating');
+})->name('rating');
 /*Route::get('/register', [RegisterController::class, 'show']);
 
 Route::post('/register',[RegisterController::class, 'register']);
