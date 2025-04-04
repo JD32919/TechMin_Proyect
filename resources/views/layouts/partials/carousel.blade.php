@@ -39,7 +39,7 @@
                 <span class="stars">★★★★★</span>
                 <div class="rating-row">
                     <img src="assets/image/coment.png" alt="Comentarios">
-                    <a href="#comments-section" class="reviews">(97)</a>
+                    <a href="{{ route('rating') }}" class="reviews">(97)</a>
                 </div>
             </div>
             <div class="price-container">
@@ -63,7 +63,7 @@
                 <span class="stars">★★★★★</span>
                 <div class="rating-row">
                     <img src="assets/image/coment.png" alt="Comentarios">
-                    <a href="#comments-section" class="reviews">(97)</a>
+                    <a href="{{ route('rating') }}" class="reviews">(97)</a>
                 </div>
             </div>
             <div class="price-container">
@@ -87,7 +87,7 @@
                 <span class="stars">★★★★★</span>
                 <div class="rating-row">
                     <img src="assets/image/coment.png" alt="Comentarios">
-                    <a href="#comments-section" class="reviews">(97)</a>
+                    <a href="{{ route('rating') }}" class="reviews">(97)</a>
                 </div>
             </div>
             <div class="price-container">
@@ -111,7 +111,7 @@
                 <span class="stars">★★★★★</span>
                 <div class="rating-row">
                     <img src="assets/image/coment.png" alt="Comentarios">
-                    <a href="#comments-section" class="reviews">(97)</a>
+                    <a href="{{ route('rating') }}" class="reviews">(97)</a>
                 </div>
             </div>
             <div class="price-container">
@@ -135,7 +135,7 @@
                 <span class="stars">★★★★★</span>
                 <div class="rating-row">
                     <img src="assets/image/coment.png" alt="Comentarios">
-                    <a href="#comments-section" class="reviews">(97)</a>
+                    <a href="{{ route('rating') }}" class="reviews">(97)</a>
                 </div>
             </div>
             <div class="price-container">
@@ -159,7 +159,7 @@
                 <span class="stars">★★★★★</span>
                 <div class="rating-row">
                     <img src="assets/image/coment.png" alt="Comentarios">
-                    <a href="#comments-section" class="reviews">(97)</a>
+                    <a href="{{ route('rating') }}" class="reviews">(97)</a>
                 </div>
             </div>
             <div class="price-container">
@@ -183,7 +183,7 @@
                 <span class="stars">★★★★★</span>
                 <div class="rating-row">
                     <img src="assets/image/coment.png" alt="Comentarios">
-                    <a href="#comments-section" class="reviews">(97)</a>
+                    <a href="{{ route('rating') }}" class="reviews">(97)</a>
                 </div>
             </div>
             <div class="price-container">

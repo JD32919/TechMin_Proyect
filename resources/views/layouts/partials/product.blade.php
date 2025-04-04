@@ -37,8 +37,8 @@
 
                 <!-- Botón para agregar al carrito -->
                 <div class="actions">
-                    <button class="add-to-cart">
-                        Add to cart
+                    <button class="add-to-cart"><a href="{{ route('rating') }}"> Add to cart</a>
+                         
                     </button>
                 </div>
             </div>

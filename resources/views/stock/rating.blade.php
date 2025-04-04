@@ -335,23 +335,17 @@
 
         <!-- Related Product 1 -->
         <div class="div8 p-1">
-            <img src="./images/related_1.png" alt="Caterpillar 745C">
-            <p>Caterpillar 745C - Heavy Duty Mining Articulated Truck</p>
-            <p>$702,000</p>
+            <img src="assets/image/card_1.png" alt="Caterpillar 745C">
         </div>
 
         <!-- Related Product 2 -->
         <div class="div9 p-2">
-            <img src="./images/related_2.png" alt="Doosan DA45">
-            <p>Doosan DA45 - Heavy Duty Custom Mining Truck</p>
-            <p>$750,000</p>
+            <img src="assets/image/card_2.png" alt="Doosan DA45">
         </div>
 
         <!-- Related Product 3 -->
         <div class="div10 p-3">
-            <img src="./images/related_3.png" alt="Volvo A45G">
-            <p>Volvo A45G - High Capacity Off-Road Articulated Hauler</p>
-            <p>$820,000</p>
+            <img src="assets/image/card_3.png" alt="Volvo A45G">
         </div>
     </div>
 
