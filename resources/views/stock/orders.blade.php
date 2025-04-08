@@ -24,6 +24,24 @@
 
 
     <div class="user_menu">
+ 
+        <div class="notification-bell" id="notificationBell">
+             
+            <svg class="bell-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+
+            <span class="notification-count" id="notificationCount">0</span>
+
+             
+            <div class="notification-dropdown" id="notificationDropdown" style="display: none;">
+                <ul id="notificationList">
+                    <!-- Aquí se insertarán las notificaciones -->
+                </ul>
+            </div>
+        </div>
 
         <img src="assets/image/icono_usuario.png" alt="Client Photo">
         
@@ -60,9 +78,7 @@
             <div class="title">
                 <h2 class="tit" >Orders</h2>
                 <p class="subtitle">Shopping cart</p>
-                <p class="espec">
-                    You have <span class="cart-count">0</span> items in your cart
-                </p>
+                 
             </div>
              
 
@@ -104,41 +120,49 @@
                      
                 </button>
             </div>
-            <form class="payment-form">
+            <form action="{{ route('checkout.store') }}" method="POST" class="payment-form" id="payment-form">
+                @csrf
                 <div class="form-group">
                     <label>Name on card</label>
-                    <input type="text" placeholder="Name" required>
+                    <input type="text" name="name_on_card" placeholder="Name" required>
                 </div>
                 <div class="form-group">
                     <label>Card Number</label>
-                    <input type="text" placeholder="1111 2222 3333 4444" required>
+                    <input type="text" name="card_number" placeholder="1111 2222 3333 4444" required>
                 </div>
                 <div class="card-extra-info">
                     <div class="form-group">
                         <label>Expiration date</label>
-                        <input type="text" placeholder="mm/yy" required>
+                        <input type="text" name="expiration_date" placeholder="mm/yy" required>
                     </div>
                     <div class="form-group">
                         <label>CVV</label>
-                        <input type="text" placeholder="123" required>
+                        <input type="text" name="cvv" placeholder="123" required>
                     </div>
                 </div>
+
                 <div class="payment-summary">
                     <div class="summary-row">
                         <span>Subtotal</span>
-                        <span>$0</span>
+                        <span id="subtotal-display">$0</span>
                     </div>
                     <div class="summary-row">
                         <span>Total (Tax incl.)</span>
-                        <span>$0</span>
+                        <span id="total-display">$0</span>
                     </div>
                     <div class="summary-row">
                         <span>Shipping</span>
                         <span>$0</span>
                     </div>
                 </div>
+
+                <!-- Inputs ocultos para valores que se calculan con JS -->
+                <input type="hidden" name="subtotal" id="subtotal-hidden">
+                <input type="hidden" name="total" id="total-hidden">
+
                 <button type="submit" class="checkout-button">Checkout</button>
             </form>
+
         </div>
     </div>
 
@@ -146,7 +170,9 @@
      
     <script src="{{ asset('assets/js/back_window.js') }}"></script>
 
-    <script src="{{ asset('assets/js/recuperar_articulos_orders.js') }}"></script>
+    <!--<script src="{{ asset('assets/js/recuperar_articulos_orders.js') }}"></script>-->
+    <script src="{{ asset('assets/js/recuperar_articulo_de_rating.js') }}"></script>
+     
 
 
      

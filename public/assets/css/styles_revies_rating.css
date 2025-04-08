@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.reviewa-customers {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 40px;
+    gap: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .reviews-wrapper {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .review-set {
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+  }
+  
+  .review-set.active {
+    display: flex;
+     
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  .review-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(40% - 10px); /* 2 columnas */
+    box-sizing: border-box;
+  }
+  
+  .stars {
+    color: gold;
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  
+  .reviewer {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 5px;
+  }
+  
+  .review-text {
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .quote {
+    margin-top: 12px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  .quote .quote-title {
+    font-weight: bold;
+  }
+  
+  .explore-button {
+    margin-top: 12px;
+    text-align: right;
+  }
+  
+  .explore-button button {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .explore-button button:hover {
+    text-decoration: underline;
+  }
+  
+  .ad-image-wrapper {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+  }
+  
+  .ad-image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }

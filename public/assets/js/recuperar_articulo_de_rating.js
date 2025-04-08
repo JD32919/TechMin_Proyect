@@ -3,8 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     if (cart.length === 0) {
-        orderContainer.innerHTML = "<p>No hay productos en el carrito.</p>";
+        orderContainer.innerHTML = "<p>There are no products in the cart.</p>";
     } else {
+        // Agregamos un contador de productos
+        const cartCount = document.createElement("p");
+        cartCount.classList.add("cart-count");
+        cartCount.textContent = `You have ${cart.length}  items${cart.length > 1 ? 's' : ''} in your cart.`;
+        orderContainer.appendChild(cartCount);
+
+        // Mostramos cada producto
         cart.forEach(product => {
             const cartItem = document.createElement("div");
             cartItem.classList.add("cart-item-card");
@@ -20,16 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
                             <button class="qty-btn">+</button>
                         </div>
                         <div class="price-delete-container">
-                            <span class="price">$${product.price}</span>
+                            <span class="price">${product.price}</span>
                             <button class="delete-icon">🗑️</button>
                         </div>
                     </div>
                 </div>
             `;
- 
+
             orderContainer.appendChild(cartItem);
 
-             
+            // Evento personalizado, si lo usas
             const event = new CustomEvent("itemAdded", { detail: cartItem });
             document.dispatchEvent(event);
         });

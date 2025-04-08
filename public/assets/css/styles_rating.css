@@ -25,16 +25,20 @@
     padding: 0; /* Remove extra padding */
 }
 
+ 
+
 .div2 img {
-    max-width: 100%; /* Ensure the image fits within the div */
-    max-height: 100%; /* Prevent the image from overflowing */
-    object-fit: contain; /* Maintain aspect ratio */
-    display: block; /* Ensure the image is treated as a block element */
-    
+    max-width: 100%;  
+    max-height: 100%;  
+    object-fit: contain; 
+    display: block; 
+     
 }
 
+ 
+
 .div3, .div12, .div13 {
-    grid-column: span 3 / span 3; /* Ensure equal width for all three divs */
+    grid-column: span 3 / span 3;  
     border: 1px solid #e0e0e0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -491,4 +495,26 @@ h2, h3, h4 {
         width: 80%;
         margin: 0 auto;
     }
+}
+
+
+.cart-message {
+    position: fixed;
+    top: 20px;
+    right: -300px; /* Empieza fuera de la vista */
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 9999;
+    opacity: 0;
+    transition: right 0.4s ease, opacity 0.4s ease;
+}
+
+.cart-message.show {
+    right: 20px; /* Se desliza hacia adentro */
+    opacity: 1;
 }

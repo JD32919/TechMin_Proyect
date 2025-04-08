@@ -37,6 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             console.error("🚨 No se encontró el elemento con clase 'cart-count'");
         }
+
+        document.getElementById("subtotal-hidden").value = subtotal.toFixed(2);
+        document.getElementById("total-hidden").value = total.toFixed(2);
+
+        // También puedes actualizar el texto mostrado, si deseas:
+        document.getElementById("subtotal-display").textContent = `$${subtotal.toLocaleString()}`;
+        document.getElementById("total-display").textContent = `$${total.toLocaleString()}`;
     }
 
     function setupCartItemEvents(item) {
@@ -82,4 +89,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     updateCardDetails();
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const bellIcon = document.getElementById("notificationBell");
+        const dropdown = document.getElementById("notificationDropdown");
+    
+        bellIcon.addEventListener("click", () => {
+            dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+        });
+    
+        // Opcional: cerrar al hacer clic fuera
+        document.addEventListener("click", (e) => {
+            if (!bellIcon.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = "none";
+            }
+        });
+    });
+    function addNotification(message) {
+        const list = document.getElementById("notificationList");
+        const li = document.createElement("li");
+        li.textContent = message;
+        list.prepend(li); // Agrega al inicio
+    }
 });

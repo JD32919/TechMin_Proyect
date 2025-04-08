@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -98,6 +99,35 @@ Route::get('/orders', function () {
 Route::get('/rating', function () {
     return view('stock.rating');
 })->name('rating');
+
+Route::get('/rating/bell', function () {
+    return view('stock.rating_bell');
+})->name('rating.bell');
+
+Route::get('/rating/caterpillar', function () {
+    return view('stock.rating_caterpillar');
+})->name('rating.caterpillar');
+
+Route::get('/rating/doosan', function () {
+    return view('stock.rating_doosan');
+})->name('rating.doosan');
+
+Route::get('/rating/hitachi', function () {
+    return view('stock.rating_hitachi');
+})->name('rating.hitachi');
+
+Route::get('/rating/terex', function () {
+    return view('stock.rating_terex');
+})->name('rating.terex');
+
+Route::get('/rating/volvo', function () {
+    return view('stock.rating_volvo');
+})->name('rating.volvo');
+
+
+Route::post('/checkout', [PaymentController::class, 'store'])->name('checkout.store');
+
+
 /*Route::get('/register', [RegisterController::class, 'show']);
 
 Route::post('/register',[RegisterController::class, 'register']);

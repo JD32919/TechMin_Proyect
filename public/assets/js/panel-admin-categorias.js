@@ -702,7 +702,7 @@ const categoryData = {
                 newPrice: '$820,000'
             },
         ]
-    },
+    }, 
     'luminaires': {
         image: 'assets/image/luminaires_category.png',
         products: [

@@ -9,7 +9,7 @@
     width: 100%;
     padding: 20px;
 }
-
+ 
 .card-container {
     display: grid;
     grid-template-columns: repeat(3,1fr); /* Ajusta el tamaño de las columnas */

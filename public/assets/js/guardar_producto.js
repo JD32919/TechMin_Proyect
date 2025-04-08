@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
             cart.push(product);
             localStorage.setItem("cart", JSON.stringify(cart));
 
-            console.log("Producto agregado:", product); // Depuración
+            console.log("Product added:", product); // Depuración
 
-            showStyledMessage("✅ Producto agregado al carrito");
+            showStyledMessage("✅ Product added to cart");
         });
     });
 

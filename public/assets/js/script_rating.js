@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle "Add to Cart" button click
     addToCartButton.addEventListener("click", () => {
         const quantity = parseInt(quantityInput.value, 10);
-        alert(`Added ${quantity} item(s) to the cart!`);
+         
     });
 });
